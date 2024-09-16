@@ -4,7 +4,7 @@ const designsData = [
   {
       id: 1,
       name: "Design 1",
-      link: "src/assets/DesignsPage/fig1.jpg",
+      link: "/assets/DesignsPage/fig1.jpg",
   },
   {
       id: 2,
