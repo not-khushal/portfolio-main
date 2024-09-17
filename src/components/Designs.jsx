@@ -4,7 +4,7 @@ import { FiArrowUpRight } from 'react-icons/fi';
 import designsData from '../data/DesignsData';
 
 const Designs = () => {
-  const [columns, setColumns] = useState(3);
+  const [columns, setColumns] = useState(1);
 
   const toggleColumns = () => {
     setColumns(columns === 3 ? 1 : 3);
