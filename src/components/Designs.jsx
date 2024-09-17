@@ -63,12 +63,12 @@ const Designs = () => {
           >
             <picture>
               <source
-                srcSet={`${design.link}?w=400 400w, ${design.link}?w=800 800w, ${design.link}?w=1200 1200w`}
+                srcSet={`${design.link} 400w, ${design.link} 800w, ${design.link} 1200w`}
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 type="image/jpeg"
               />
               <img
-                src={`${design.link}?w=800`} // Provide a default image size
+                src={`${design.link}`} // Provide a default image size
                 alt={design.name}
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:blur-sm group-hover:scale-105 group-hover:ring-4 group-hover:ring-blue-500"
