@@ -4,12 +4,12 @@ const designsData = [
   {
       id: 1,
       name: "Design 1",
-      link: "../assets/DesignsPage/fig1.jpg",
+      link: "../assets/ProfilePage/div1.1.jpeg",
   },
   {
       id: 2,
       name: "Design 2",
-      link: "src/assets/DesignsPage/fig2.jpg",
+      link: "src/assets/ProfilePage/div2.1.png",
   },
   {
       id: 3,
