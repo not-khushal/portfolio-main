@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowUpRight } from 'react-icons/fi';
 import designsData from '../data/DesignsData';
-import image1 from '../assets/AboutPage/div1.1.jpeg';
 
 const Designs = () => {
   const [columns, setColumns] = useState(1);
@@ -69,7 +68,7 @@ const Designs = () => {
                 type="image/jpeg"
               />
               <img
-                src={image1} // Provide a default image size
+                src={design.link} // Provide a default image size
                 alt={design.name}
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:blur-sm group-hover:scale-105 group-hover:ring-4 group-hover:ring-blue-500"
