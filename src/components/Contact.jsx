@@ -1,8 +1,7 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import designsData from '../data/DesignsData';
-import image1 from '../assets/DesignsPage/fig1.jpg';
+
 
 const Contact = () => {
   const handleArrowClick = () => {
@@ -51,8 +50,6 @@ const Contact = () => {
               >
                 Instagram
               </a>
-              <img src={image1} />
-              <img src={design.link} />
             </motion.p>
             <motion.p
               initial={{ opacity: 0, x: 100 }}
