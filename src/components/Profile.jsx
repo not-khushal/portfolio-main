@@ -18,7 +18,7 @@ const Profile = () => {
       {/* Layout 1 */}
       <div className="text-center mt-12">
         <motion.h1 initial={{opacity:0, y: 100}} whileInView={{opacity:1, y:1}} transition={{type: "spring",stiffness: 100,damping: 10,delay: 0.3,}} className="text-5xl font-light">
-          Hey <span role="img" aria-label="wave">👋</span> I'm <span className='font-bold'>Khushal</span>
+          Namaste <span role="img" aria-label="wave">🙏</span> I'm <span className='font-bold'>Khushal</span>
         </motion.h1>
       </div>
 
