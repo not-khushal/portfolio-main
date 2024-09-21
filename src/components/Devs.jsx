@@ -1,6 +1,20 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion'; // Import framer-motion
-import devsData from '../data/DevsData'; // Import your devs data
+
+// Move devsData directly into Devs.jsx
+const devsData = [
+  { id: 1, name: "Digital Agency", link: "src/assets/DevsPage/image1.jpeg" },
+  { id: 2, name: "Animated Fanta", link: "src/assets/DevsPage/image2.jpeg" },
+  { id: 3, name: "Animated Portfolio 1", link: "src/assets/DevsPage/image3.jpeg" },
+  { id: 4, name: "Animated-Portfolio 2", link: "src/assets/DevsPage/image4.jpeg" },
+  { id: 5, name: "Black Tumbler Cafe", link: "src/assets/DevsPage/image5.jpeg" },
+  { id: 6, name: "Shoes E-Commerce", link: "src/assets/DevsPage/image6.jpeg" },
+  { id: 7, name: "Tinder For Desktop", link: "src/assets/DevsPage/image7.jpeg" },
+  { id: 8, name: "Two Good Co Clone", link: "src/assets/DevsPage/image8.jpeg" },
+  { id: 9, name: "Skill X Learning", link: "src/assets/DevsPage/image9.jpeg" },
+  { id: 10, name: "Space Landing Page", link: "src/assets/DevsPage/image10.jpeg" },
+  { id: 11, name: "Tourism Landing Page", link: "src/assets/DevsPage/image11.jpeg" },
+];
 
 const Devs = () => {
   const [hoveredDev, setHoveredDev] = useState(null); // Track which project is being hovered
@@ -23,7 +37,7 @@ const Devs = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full relative">
         
         {/* First column: Serial numbers, project names, and lines */}
-        <div className="space-y-6 w-full">
+        <div className="space-y-6 w-full pb-32">
           {devsData.map((dev, index) => (
             <motion.div
               key={dev.id}
@@ -46,7 +60,7 @@ const Devs = () => {
               <span className="text-black font-semibold mr-8 ml-0 md:ml-16 text-xl md:text-2xl">{`0${dev.id}`}</span>
 
               {/* Project name with hover effect */}
-              <span className="text-black font-semibold text-xl md:text-3xl group-hover:bg-black group-hover:text-white rounded-full px-6 py-2 md:px-10 md:py-2 transition-colors duration-300 cursor-pointer whitespace-nowrap inline-block">
+              <span className="text-black font-semibold text-xl md:text-3xl group-hover:bg-black group-hover:text-white rounded-full px-6 py-2 md:px-10 md:py-2 transition-colors duration-300 cursor-pointer whitespace-nowrap inline-block ">
                 {dev.name}
               </span>
 
@@ -76,3 +90,4 @@ const Devs = () => {
 };
 
 export default Devs;
+
