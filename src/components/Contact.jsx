@@ -43,7 +43,7 @@ const Contact = () => {
               transition={{ type: 'spring', stiffness: 100, damping: 15, delay: 0.5 }}
             >
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/not_so_khushal?igsh=MXF2dTU5YzEyZ3d5eA=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
