@@ -1,10 +1,54 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowUpRight } from 'react-icons/fi';
-import designsData from '../data/DesignsData';
+// Import images directly
+import image1 from '../assets/DesignsPage/fig1.jpg';
+import image2 from '../assets/DesignsPage/fig2.jpg';
+import image3 from '../assets/DesignsPage/fig3.jpg';
+import image4 from '../assets/DesignsPage/fig4.jpg';
+import image5 from '../assets/DesignsPage/fig5.jpg';
+import image6 from '../assets/DesignsPage/fig6.jpg';
+import image7 from '../assets/DesignsPage/fig7.jpg';
+import image8 from '../assets/DesignsPage/fig8.jpg';
+import image9 from '../assets/DesignsPage/fig9.jpg';
+import image10 from '../assets/DesignsPage/fig10.jpg';
+import image11 from '../assets/DesignsPage/fig11.jpg';
+import image12 from '../assets/DesignsPage/fig12.jpg';
+import image14 from '../assets/DesignsPage/fig14.jpg';
+import image15 from '../assets/DesignsPage/fig15.jpg';
+import image16 from '../assets/DesignsPage/fig16.jpg';
+import image17 from '../assets/DesignsPage/fig17.jpg';
+import image18 from '../assets/DesignsPage/fig18.jpg';
+import image19 from '../assets/DesignsPage/fig19.jpg';
+import image20 from '../assets/DesignsPage/fig20.jpg';
+import image21 from '../assets/DesignsPage/fig21.jpg';
+
+// Define the designsData array with direct image links
+const designsData = [
+  { id: 1, name: "Design 1", link: image1 },
+  { id: 2, name: "Design 2", link: image2 },
+  { id: 3, name: "Design 3", link: image3 },
+  { id: 4, name: "Design 4", link: image4 },
+  { id: 5, name: "Design 5", link: image5 },
+  { id: 6, name: "Design 6", link: image6 },
+  { id: 7, name: "Design 7", link: image7 },
+  { id: 8, name: "Design 8", link: image8 },
+  { id: 9, name: "Design 9", link: image9 },
+  { id: 10, name: "Design 10", link: image10 },
+  { id: 11, name: "Design 11", link: image11 },
+  { id: 12, name: "Design 12", link: image12 },
+  { id: 14, name: "Design 14", link: image14 },
+  { id: 15, name: "Design 15", link: image15 },
+  { id: 16, name: "Design 16", link: image16 },
+  { id: 17, name: "Design 17", link: image17 },
+  { id: 18, name: "Design 18", link: image18 },
+  { id: 19, name: "Design 19", link: image19 },
+  { id: 20, name: "Design 20", link: image20 },
+  { id: 21, name: "Design 21", link: image21 },
+];
 
 const Designs = () => {
-  const [columns, setColumns] = useState(1);
+  const [columns, setColumns] = useState(3);
 
   const toggleColumns = () => {
     setColumns(columns === 3 ? 1 : 3);
@@ -52,8 +96,8 @@ const Designs = () => {
       <motion.div
         variants={containerVariants}
         initial="hidden"
-        animate="show"
-        className={`grid grid-cols-1 md:grid-cols-${columns} gap-8`}
+        whileInView="show"
+        className={`grid grid-cols-3 md:grid-cols-${columns} gap-8`}
       >
         {designsData.map((design) => (
           <motion.div
@@ -63,12 +107,12 @@ const Designs = () => {
           >
             <picture>
               <source
-                srcSet={`${design.link} 400w, ${design.link} 800w, ${design.link} 1200w`}
+                srcSet={`${design.link}?w=400 400w, ${design.link}?w=800 800w, ${design.link}?w=1200 1200w`}
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 type="image/jpeg"
               />
               <img
-                src={design.link} // Provide a default image size
+                src={`${design.link}?w=800`} // Provide a default image size
                 alt={design.name}
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:blur-sm group-hover:scale-105 group-hover:ring-4 group-hover:ring-blue-500"
