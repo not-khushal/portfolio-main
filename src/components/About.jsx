@@ -208,13 +208,6 @@ const About = () => {
       <div className="w-full h-64 md:h-96 bg-gray-300 overflow-hidden rounded-lg">
         <img src={image7} alt="SRM campus on a random morning" className="w-full h-full object-cover" />
       </div>
-      <motion.p 
-        initial={{opacity: 0, y: -100}} 
-        whileInView={{opacity: 1, y: 1}} 
-        transition={{type: "spring", stiffness: 100, damping: 15, delay: 0.7}} 
-        className="text-gray-700 mt-4 text-center">
-        SRM campus on a random morning
-      </motion.p>
     </motion.div>
   </div>
 
@@ -341,13 +334,6 @@ const About = () => {
                     <img src={image9} alt="Image 8" className="w-full h-full object-cover" />
                 </motion.div>
             </div>
-            <motion.p 
-                initial={{opacity: 0, y: -100}} 
-                whileInView={{opacity: 1, y: 1}} 
-                transition={{type: "spring", stiffness: 100, damping: 15, delay: 0.8}} 
-                className="text-gray-700 text-center md:pr-96 -mt-16 md:-mt-20">
-                A photo of top of Kodaikanal hills.
-            </motion.p>
         </div>
     </div>
 
