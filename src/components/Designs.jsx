@@ -97,7 +97,7 @@ const Designs = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        className={`grid grid-cols-3 md:grid-cols-${columns} gap-8`}
+        className={`grid ${columns === 3 ? 'grid-cols-3' : 'grid-cols-1'} gap-8`}
       >
         {designsData.map((design) => (
           <motion.div
